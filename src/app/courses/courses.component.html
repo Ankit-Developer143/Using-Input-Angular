@@ -1,0 +1,9 @@
+<div *ngFor="let course of allcourses" [class.selected]="course === selectedCourse" (click)="onSelect(course)">
+    <ul>
+        <li>{{course.name}}</li>
+    </ul>
+</div>
+<!-- <div *ngIf="selectedCourse">
+    <h2>{{selectedCourse.name}}</h2>
+</div> -->
+<app-course-details [course]="selectedCourse"></app-course-details>
